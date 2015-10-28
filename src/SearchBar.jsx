@@ -32,7 +32,7 @@ const SearchBar = React.createClass({
   },
   componentDidMount() {
     if (this.props.autoFocus) {
-      this.refs.input.focus();
+      this.refs.input.getDOMNode().focus();
     }
   },
   normalizeInput() {
@@ -87,7 +87,7 @@ const SearchBar = React.createClass({
   },
   search(value) {
     clearTimeout(this._timerId);
-    this.refs.input.blur();
+    this.refs.input.getDOMNode().blur();
     let {highlightedItem, suggestions} = this.getInitialState();
     this.setState({highlightedItem, suggestions});
     this.props.onSubmit(value);
