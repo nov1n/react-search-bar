@@ -21,7 +21,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "install": "babel src --out-dir lib",
+    "build": "babel src --out-dir lib",
     "build-demo": "webpack -p",
     "demo": "webpack-dev-server --config webpack.config.dev.js",
     "lint": "eslint src"
