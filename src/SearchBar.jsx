@@ -46,7 +46,6 @@ const SearchBar = React.createClass({
 
     this._timerId = setTimeout(() => {
       let searchTerm = this.normalizeInput();
-      if (!searchTerm) return;
       new Promise((resolve) => {
         this.props.onChange(input, resolve);
       }).then((suggestions) => {
@@ -82,7 +81,6 @@ const SearchBar = React.createClass({
   onSubmit(e) {
     e.preventDefault();
     let input = this.normalizeInput();
-    if (!input) return;
     this.search(input);
   },
   search(value) {
