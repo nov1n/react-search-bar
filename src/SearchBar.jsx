@@ -118,7 +118,7 @@ const SearchBar = React.createClass({
             onFocus={() => this.setState({isFocused: true})} />
             { this.state.value &&
               <span
-                className="icon search-bar-cancel"
+                className="fa fa-times"
                 onClick={() => this.setState(this.getInitialState())}>
               </span> }
           <input
