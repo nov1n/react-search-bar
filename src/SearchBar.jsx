@@ -98,6 +98,7 @@ const SearchBar = React.createClass({
           {"is-focused": this.state.isFocused}
         )}>
           <input
+            id="query"
             className="search-bar-input"
             name={this.props.inputName}
             type="text"
